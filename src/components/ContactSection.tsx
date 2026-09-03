@@ -20,6 +20,9 @@ const VISIT_TIMES = [
 
 export default function ContactSection() {
   const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [confirmedTime, setConfirmedTime] = useState<string | null>(null);
   const [step, setStep] = useState(1);
@@ -280,26 +283,26 @@ export default function ContactSection() {
                 />
 
                 <button
-                  onClick={() => {
-                    if (name.trim()) {
-                      setStep(2);
-                    }
-                  }}
-                  className={`
-                    group
-                    mt-12
-                    font-mono
-                    text-xs
-                    uppercase
-                    tracking-[0.22em]
-                    transition-opacity
-                    ${
-                      name.trim()
-                        ? "opacity-100"
-                        : "opacity-40 cursor-not-allowed"
-                    }
-                  `}
-                >
+  onClick={() => {
+    if (name.trim()) {
+      setStep(2);
+    }
+  }}
+  className={`
+    group
+    mt-12
+    font-mono
+    text-xs
+    uppercase
+    tracking-[0.22em]
+    transition-opacity
+    ${
+      name.trim()
+        ? "opacity-100"
+        : "opacity-40 cursor-not-allowed"
+    }
+  `}
+>
                   <span className="inline-flex items-center gap-3">
                     Продолжить
                     <span
@@ -341,21 +344,37 @@ export default function ContactSection() {
                 </p>
 
                 <input
-                  placeholder="Telegram, телефон или e-mail"
-                  className="
-                    w-full
-                    bg-transparent
-                    border-b
-                    border-white/20
-                    py-5
-                    text-xl
-                    font-light
-                    outline-none
-                    placeholder:text-white/20
-                    focus:border-white/60
-                    transition-colors
-                  "
-                />
+  value={contact}
+  onChange={(e) => setContact(e.target.value)}
+  placeholder="Telegram, телефон или e-mail"
+  className="
+    w-full
+    bg-transparent
+    border-b
+    border-white/20
+    py-5
+    text-xl
+    font-light
+    outline-none
+    placeholder:text-white/20
+    focus:border-white/60
+    transition-colors
+  "
+/>
+                {submitError && (
+  <p
+    className="
+      mt-4
+      font-mono
+      text-[0.55rem]
+      uppercase
+      tracking-[0.12em]
+      text-white/50
+    "
+  >
+    {submitError}
+  </p>
+)}
                 <p
   className="
     mt-6
@@ -416,11 +435,45 @@ export default function ContactSection() {
 
 
                   <button
-                    onClick={() => {
-                      setConfirmedTime(selectedTime);
-                      setSelectedTime(null);
-                      setStep(3);
-                    }}
+                    onClick={async () => {
+  if (!contact.trim() || submitting) return;
+
+  setSubmitting(true);
+  setSubmitError("");
+
+  try {
+    const response = await fetch(
+      "https://formspree.io/f/xyeyjvpp",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          contact: contact,
+          selected_time: selectedTime || "Не выбрано",
+        }),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Form submission failed");
+    }
+
+    setConfirmedTime(selectedTime);
+    setSelectedTime(null);
+    setStep(3);
+    setContact("");
+  } catch {
+    setSubmitError(
+      "Не удалось отправить заявку. Попробуйте ещё раз."
+    );
+  } finally {
+    setSubmitting(false);
+  }
+}}
                     className="
                       group
                       inline-flex

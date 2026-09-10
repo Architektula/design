@@ -160,6 +160,21 @@ export default function ContactSection() {
               Выбрано: {selectedTime}
             </motion.p>
           )}
+          <p
+  className="
+    mt-6
+    font-mono
+    text-[0.55rem]
+    md:text-xs
+    tracking-[0.12em]
+    text-white/60
+    leading-relaxed
+  "
+>
+  Новомосковск · Маяковского, 30В
+  <br />
+  офис 110
+</p>
         </motion.div>
 
         {/* RIGHT — PRIVATE CONSULTATION */}
@@ -181,23 +196,8 @@ export default function ContactSection() {
             justify-center
           "
         >
-  <div className="flex justify-between items-start mb-4">
-  <p
-    className="
-      font-mono
-      text-[0.55rem]
-      md:text-xs
-      tracking-[0.12em]
-      text-white/60
-      leading-relaxed
-      text-left
-    "
-  >
-    Новомосковск · Маяковского, 30В
-    <br />
-    офис 110
-  </p>
-
+  <div className="flex justify-end items-start mb-4">
+  
   <div className="flex flex-col items-end gap-0 leading-relaxed">
     <a
       href="tel:+79038429153"

@@ -181,59 +181,48 @@ export default function ContactSection() {
             justify-center
           "
         >
-          <div
-  className="
-    flex
-    flex-col
-    items-end
-    mb-4
-    gap-2
-  "
->
-  <a
-    href="tel:+79038429153"
+  <div className="flex justify-between items-start mb-4">
+  <p
     className="
       font-mono
-      text-sm
-      tracking-[0.25em]
-      text-white/60
-      hover:text-white
-      transition-colors
+      text-[0.55rem]
+      md:text-xs
+      tracking-[0.12em]
+      text-white/35
+      leading-relaxed
+      text-left
     "
   >
-    8-903-842-91-53
-  </a>
+    Новомосковск · Маяковского, 30В
+    <br />
+    офис 110
+  </p>
 
-  <a
-    href="https://vk.ru/id271068896"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      font-mono
-      text-xs
-      uppercase
-      tracking-[0.18em]
-      text-white/50
-      hover:text-white
-      transition-colors
-    "
-  >
-    Написать в ВКонтакте →
-  </a>
-            <p
-  className="
-    font-mono
-    text-[0.55rem]
-    md:text-xs
-    tracking-[0.12em]
-    text-white/35
-    text-right
-    leading-relaxed
-    max-w-[280px]
-  "
->
-  Новомосковск · Маяковского, 30В · офис 110
-</p>
+  <div className="flex flex-col items-end gap-2">
+    <a
+      href="tel:+79038429153"
+      className="font-mono text-sm tracking-[0.25em] text-white/60 hover:text-white transition-colors"
+    >
+      8-903-842-91-53
+    </a>
+
+    <a
+      href="https://vk.ru/id271068896"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        font-mono
+        text-xs
+        uppercase
+        tracking-[0.18em]
+        text-white/50
+        hover:text-white
+        transition-colors
+      "
+    >
+      Написать в ВКонтакте →
+    </a>
+  </div>
 </div>
           <h3
             className="

@@ -243,14 +243,14 @@ text-white/60
           <h3
   className="
     relative
-    top-4
+    top-8
     md:-top-24
     font-serif
     italic
     text-4xl
     md:text-5xl
     leading-tight
-    mb-16
+    mb-20
     md:mb-12
     pr-8
     md:pr-0

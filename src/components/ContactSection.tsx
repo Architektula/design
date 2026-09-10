@@ -211,7 +211,7 @@ export default function ContactSection() {
     font-mono
     text-xs
     md:text-sm
-    tracking-[0.25em]
+    tracking-[0.18em]
     text-white/60
     hover:text-white
     transition-colors
@@ -239,17 +239,17 @@ export default function ContactSection() {
 </div>
           <h3
   className="
-  relative
-  md:-top-24
-  font-serif
-  italic
-  text-3xl
-  md:text-5xl
-  leading-tight
-  mb-12
-  pr-8
-  md:pr-0
-"
+    relative
+    md:-top-24
+    font-serif
+    italic
+    text-4xl
+    md:text-5xl
+    leading-tight
+    mb-12
+    pr-8
+    md:pr-0
+  "
 >
             Начнём
             <br />

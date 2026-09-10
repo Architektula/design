@@ -655,27 +655,26 @@ export default function ContactSection() {
   <div
     className="
       flex
-      flex-col
-      gap-3
-      md:flex-row
-      md:items-center
-      md:justify-between
+      flex-wrap
+      items-center
+      justify-between
+      gap-y-3
     "
   >
-    <div className="flex items-center gap-6">
-      <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
+    <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
 
-      <a
-        href="https://www.behance.net/cbacaf41"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white transition-colors"
-      >
-        Behance ↗
-      </a>
-    </div>
+    <a
+      href="https://www.behance.net/cbacaf41"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition-colors"
+    >
+      Behance ↗
+    </a>
 
-    <span>Novomoskovsk, Russia</span>
+    <span className="w-full md:w-auto">
+      Novomoskovsk, Russia
+    </span>
   </div>
 </div>
     </section>

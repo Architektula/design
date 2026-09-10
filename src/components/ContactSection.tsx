@@ -198,7 +198,7 @@ export default function ContactSection() {
     офис 110
   </p>
 
-  <div className="flex flex-col items-end gap-2">
+  <div className="flex flex-col items-end gap-0 leading-relaxed">
     <a
       href="tel:+79038429153"
       className="
@@ -206,7 +206,7 @@ export default function ContactSection() {
         text-[0.55rem]
         md:text-xs
         tracking-[0.12em]
-        text-white/35
+        text-white/60
         leading-relaxed
         hover:text-white
         transition-colors

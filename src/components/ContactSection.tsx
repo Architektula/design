@@ -222,17 +222,18 @@ export default function ContactSection() {
   </a>
 </div>
           <h3
-            className="
-              font-serif
-              italic
-              text-3xl
-              md:text-5xl
-              leading-tight
-              mb-12
-              pr-8
-              md:pr-0
-            "
-          >
+  className="
+    -mt-5
+    font-serif
+    italic
+    text-3xl
+    md:text-5xl
+    leading-tight
+    mb-12
+    pr-8
+    md:pr-0
+  "
+>
             Начнём
             <br />
             диалог?

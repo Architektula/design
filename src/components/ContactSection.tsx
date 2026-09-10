@@ -638,7 +638,7 @@ export default function ContactSection() {
 
             {/* FOOTER */}
 
-      <div
+<div
   className="
     mt-10
     border-t
@@ -648,34 +648,36 @@ export default function ContactSection() {
     py-8
     max-w-[1400px]
     mx-auto
-    flex
-    flex-col
+    grid
+    grid-cols-2
+    md:grid-cols-3
     items-center
     gap-4
-    md:flex-row
-    md:justify-between
-    md:gap-0
     font-mono
     text-[0.65rem]
     uppercase
     tracking-[0.22em]
     text-white/30
+    text-center
   "
 >
-  <div className="flex items-center gap-6">
-    <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
+  <span className="text-left">
+    © {new Date().getFullYear()} Vladimir Sergeev
+  </span>
 
-    <a
-      href="https://www.behance.net/cbacaf41"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:text-white transition-colors"
-    >
-      Behance ↗
-    </a>
-  </div>
-        <span>Novomoskovsk, Russia</span>
-      </div>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-white transition-colors md:col-start-2"
+  >
+    Behance ↗
+  </a>
+
+  <span className="col-span-2 md:col-span-1 md:col-start-3 md:text-right">
+    Novomoskovsk, Russia
+  </span>
+</div>
     </section>
   );
 }

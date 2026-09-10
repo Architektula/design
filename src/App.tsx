@@ -19,7 +19,7 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter base="/design">
+      <WouterRouter base="/">
         <Router />
       </WouterRouter>
     </QueryClientProvider>

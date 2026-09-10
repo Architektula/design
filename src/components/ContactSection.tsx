@@ -188,7 +188,7 @@ export default function ContactSection() {
       text-[0.55rem]
       md:text-xs
       tracking-[0.12em]
-      text-white/35
+      text-white/60
       leading-relaxed
       text-left
     "

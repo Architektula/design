@@ -237,7 +237,7 @@ export default function ContactSection() {
 </div>
           <h3
   className="
-    -mt-60
+    -mt-45
     font-serif
     italic
     text-3xl

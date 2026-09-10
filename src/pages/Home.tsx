@@ -12,6 +12,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 import heroImage from "@assets/generated_images/hero-interior.jpg";
 import philosophyImage from "@assets/generated_images/moscow-3.jpg";
+import aboutImage from "@assets/generated_images/vladimir-sergeev.jpg";
 
 import commercial01 from "@assets/generated_images/commercial-project-01.webp";
 import commercial02 from "@assets/generated_images/commercial-project-02.webp";
@@ -256,10 +257,6 @@ function CommercialProjectImage() {
   );
 }
 function AboutImage() {
-  const aboutImage = PROJECTS[1]?.hero;
-
-  if (!aboutImage) return null;
-
   return (
     <div className="aspect-[4/5] overflow-hidden relative">
 
@@ -273,39 +270,9 @@ function AboutImage() {
     w-full
     h-full
     object-cover
-    grayscale
   "
 />
-
-{/* COLOR */}
-<motion.div
-  className="
-    absolute
-    inset-0
-    overflow-hidden
-    pointer-events-none
-  "
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{
-  duration: 5,
-  delay: 0.3,
-  ease: [0.16, 1, 0.3, 1],
-}}
->
-  <img
-    src={aboutImage}
-    alt=""
-    className="
-      w-full
-      h-full
-      object-cover
-    "
-  />
-</motion.div>
-
-      {/* SOFT TRANSITION */}
+     {/* SOFT TRANSITION */}
       <div
         className="
           absolute

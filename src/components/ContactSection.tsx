@@ -164,7 +164,8 @@ export default function ContactSection() {
   className="
     mt-6
     font-mono
-    text-sm
+    text-xs
+    md:text-sm
     tracking-[0.25em]
     text-white/60
     leading-relaxed
@@ -237,18 +238,17 @@ export default function ContactSection() {
 </div>
           <h3
   className="
-    relative
-    -top-16
-    md:-top-24
-    font-serif
-    italic
-    text-3xl
-    md:text-5xl
-    leading-tight
-    mb-12
-    pr-8
-    md:pr-0
-  "
+  relative
+  md:-top-24
+  font-serif
+  italic
+  text-3xl
+  md:text-5xl
+  leading-tight
+  mb-12
+  pr-8
+  md:pr-0
+"
 >
             Начнём
             <br />

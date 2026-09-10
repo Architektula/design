@@ -639,42 +639,41 @@ export default function ContactSection() {
             {/* FOOTER */}
 
       <div
-        className="
-          mt-10
-          border-t
-          border-white/10
-          px-8
-          md:px-20
-          py-8
-          max-w-[1400px]
-          mx-auto
-          flex
-          flex-col
-          items-center
-          gap-4
-          md:flex-row
-          md:justify-between
-          md:gap-0
-          font-mono
-          text-[0.65rem]
-          uppercase
-          tracking-[0.22em]
-          text-white/30
-        "
-      >
-        <div className="flex items-center gap-6">
-          <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
+  className="
+    mt-10
+    border-t
+    border-white/10
+    px-8
+    md:px-20
+    py-8
+    max-w-[1400px]
+    mx-auto
+    flex
+    flex-col
+    items-center
+    gap-4
+    md:flex-row
+    md:justify-between
+    md:gap-0
+    font-mono
+    text-[0.65rem]
+    uppercase
+    tracking-[0.22em]
+    text-white/30
+  "
+>
+  <div className="flex items-center gap-6">
+    <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
 
-          <a
-            href="https://www.behance.net/cbacaf41"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            Behance ↗
-          </a>
-        </div>
-
+    <a
+      href="https://www.behance.net/cbacaf41"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-white transition-colors"
+    >
+      Behance ↗
+    </a>
+  </div>
         <span>Novomoskovsk, Russia</span>
       </div>
     </section>

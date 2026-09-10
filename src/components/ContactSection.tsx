@@ -160,20 +160,6 @@ export default function ContactSection() {
               Выбрано: {selectedTime}
             </motion.p>
           )}
-                    <p
-            className="
-              mt-6
-              font-mono
-              text-sm
-              tracking-[0.25em]
-              text-white/60
-              leading-relaxed
-            "
-          >
-            Новомосковск · Маяковского, 30В
-            <br />
-            офис 110
-          </p>
         </motion.div>
 
         {/* RIGHT — PRIVATE CONSULTATION */}
@@ -236,18 +222,17 @@ export default function ContactSection() {
   </a>
 </div>
           <h3
-  className="
-    -mt-50
-    font-serif
-    italic
-    text-3xl
-    md:text-5xl
-    leading-tight
-    mb-12
-    pr-8
-    md:pr-0
-  "
->
+            className="
+              font-serif
+              italic
+              text-3xl
+              md:text-5xl
+              leading-tight
+              mb-12
+              pr-8
+              md:pr-0
+            "
+          >
             Начнём
             <br />
             диалог?

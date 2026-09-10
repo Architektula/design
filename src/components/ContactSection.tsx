@@ -189,11 +189,13 @@ export default function ContactSection() {
             ease: EASE,
           }}
           className="
-            p-8
-            md:p-20
-            flex
-            flex-col
-            justify-center
+                p-8
+    md:p-20
+    flex
+    flex-col
+    justify-center
+    translate-y-8
+    md:translate-y-0
           "
         >
           <div
@@ -246,7 +248,8 @@ export default function ContactSection() {
     text-4xl
     md:text-5xl
     leading-tight
-    mb-12
+    mb-16
+    md:mb-12
     pr-8
     md:pr-0
   "

@@ -160,6 +160,20 @@ export default function ContactSection() {
               Выбрано: {selectedTime}
             </motion.p>
           )}
+                    <p
+            className="
+              mt-6
+              font-mono
+              text-sm
+              tracking-[0.25em]
+              text-white/60
+              leading-relaxed
+            "
+          >
+            Новомосковск · Маяковского, 30В
+            <br />
+            офис 110
+          </p>
         </motion.div>
 
         {/* RIGHT — PRIVATE CONSULTATION */}
@@ -223,7 +237,7 @@ export default function ContactSection() {
 </div>
           <h3
   className="
-    -mt-5
+    -mt-10
     font-serif
     italic
     text-3xl

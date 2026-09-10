@@ -202,7 +202,8 @@ export default function ContactSection() {
   className="
     flex
     flex-col
-    items-end
+    items-start
+    md:items-end
     mb-4
     gap-2
   "
@@ -210,12 +211,10 @@ export default function ContactSection() {
   <a
     href="tel:+79038429153"
     className="
-      self-start
-      md:self-auto
       font-mono
       text-xs
       md:text-sm
-      tracking-[0.18em]
+      tracking-[0.25em]
       text-white/60
       hover:text-white
       transition-colors
@@ -230,10 +229,10 @@ export default function ContactSection() {
     rel="noopener noreferrer"
     className="
       font-mono
-      text-xs
-      uppercase
-      tracking-[0.18em]
-      text-white/50
+text-xs
+md:text-sm
+tracking-[0.25em]
+text-white/60
       hover:text-white
       transition-colors
     "

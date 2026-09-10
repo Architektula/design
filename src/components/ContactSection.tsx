@@ -220,6 +220,20 @@ export default function ContactSection() {
   >
     Написать в ВКонтакте →
   </a>
+            <p
+  className="
+    font-mono
+    text-[0.55rem]
+    md:text-xs
+    tracking-[0.12em]
+    text-white/35
+    text-right
+    leading-relaxed
+    max-w-[280px]
+  "
+>
+  Новомосковск · Маяковского, 30В · офис 110
+</p>
 </div>
           <h3
             className="

@@ -206,18 +206,19 @@ export default function ContactSection() {
   "
 >
   <a
-    href="tel:+79038429153"
-    className="
-      font-mono
-      text-sm
-      tracking-[0.25em]
-      text-white/60
-      hover:text-white
-      transition-colors
-    "
-  >
-    8-903-842-91-53
-  </a>
+  href="tel:+79038429153"
+  className="
+    font-mono
+    text-xs
+    md:text-sm
+    tracking-[0.25em]
+    text-white/60
+    hover:text-white
+    transition-colors
+  "
+>
+  +7-903-842-91-53
+</a>
 
   <a
     href="https://vk.ru/id271068896"

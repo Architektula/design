@@ -160,21 +160,6 @@ export default function ContactSection() {
               Выбрано: {selectedTime}
             </motion.p>
           )}
-          <p
-  className="
-    mt-6
-    font-mono
-    text-[0.55rem]
-    md:text-xs
-    tracking-[0.12em]
-    text-white/60
-    leading-relaxed
-  "
->
-  Новомосковск · Маяковского, 30В
-  <br />
-  офис 110
-</p>
         </motion.div>
 
         {/* RIGHT — PRIVATE CONSULTATION */}
@@ -196,43 +181,45 @@ export default function ContactSection() {
             justify-center
           "
         >
-  <div className="flex justify-end items-start mb-4">
-  
-  <div className="flex flex-col items-end gap-0 leading-relaxed">
-    <a
-      href="tel:+79038429153"
-      className="
-        font-mono
-        text-[0.55rem]
-        md:text-xs
-        tracking-[0.12em]
-        text-white/60
-        leading-relaxed
-        hover:text-white
-        transition-colors
-      "
-    >
-      8-903-842-91-53
-    </a>
+          <div
+  className="
+    flex
+    flex-col
+    items-end
+    mb-4
+    gap-2
+  "
+>
+  <a
+    href="tel:+79038429153"
+    className="
+      font-mono
+      text-sm
+      tracking-[0.25em]
+      text-white/60
+      hover:text-white
+      transition-colors
+    "
+  >
+    8-903-842-91-53
+  </a>
 
-    <a
-      href="https://vk.ru/id271068896"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="
-        font-mono
-        text-[0.55rem]
-        md:text-xs
-        tracking-[0.12em]
-        text-white/35
-        leading-relaxed
-        hover:text-white
-        transition-colors
-      "
-    >
-      Написать в ВКонтакте →
-    </a>
-  </div>
+  <a
+    href="https://vk.ru/id271068896"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      font-mono
+      text-xs
+      uppercase
+      tracking-[0.18em]
+      text-white/50
+      hover:text-white
+      transition-colors
+    "
+  >
+    Написать в ВКонтакте →
+  </a>
 </div>
           <h3
             className="
@@ -636,51 +623,38 @@ export default function ContactSection() {
       {/* FOOTER */}
 
       <div
-  className="
-    mt-10
-    border-t
-    border-white/10
-    px-8
-    md:px-20
-    py-8
-    max-w-[1400px]
-    mx-auto
-    font-mono
-    text-[0.65rem]
-    uppercase
-    tracking-[0.22em]
-    text-white/30
-  "
->
-  <div
-  className="
-    flex
-    flex-wrap
-    items-center
-    justify-center
-    gap-x-6
-    gap-y-3
-    md:justify-between
-  "
->
-  <span>
-    © {new Date().getFullYear()} Vladimir Sergeev
-  </span>
+        className="
+              mt-10
+              border-t
+              border-white/10
+              px-8
+              md:px-20
+              py-8
+              max-w-[1400px]
+              mx-auto
+              flex
+              items-center
+              justify-between
+              font-mono
+              text-[0.65rem]
+              uppercase
+              tracking-[0.22em]
+              text-white/30
+            "
+      >
+        <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
 
-  <a
-    href="https://www.behance.net/cbacaf41"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-white transition-colors"
-  >
-    Behance ↗
-  </a>
+<a
+  href="https://www.behance.net/cbacaf41"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-white transition-colors"
+>
+  Behance ↗
+</a>
 
-  <span className="w-full text-center md:w-auto md:text-left">
-    Novomoskovsk, Russia
-  </span>
-</div>
-</div>
+<span>Novomoskovsk, Russia</span>
+      </div>
     </section>
   );
 }

@@ -31,6 +31,33 @@ export default function ProjectDetail() {
         `${project.title} — авторский дизайн интерьера. ${project.type}, ${project.area}, ${project.location}.`
       );
     }
+
+    const existingSchema = document.getElementById("project-schema");
+
+    if (existingSchema) {
+      existingSchema.remove();
+    }
+
+    const script = document.createElement("script");
+    script.id = "project-schema";
+    script.type = "application/ld+json";
+
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": `${project.title} — Владимир Сергеев`,
+      "description": `${project.title} — авторский дизайн интерьера. ${project.type}, ${project.area}, ${project.location}.`,
+      "url": `https://sergeevdesign.ru/project/${project.slug}`,
+      "image": project.hero,
+      "about": {
+        "@type": "Person",
+        "name": "Владимир Сергеев",
+        "jobTitle": "Дизайнер интерьера",
+        "url": "https://sergeevdesign.ru/"
+      }
+    });
+
+    document.head.appendChild(script);
   }
 }, [slug]);
 

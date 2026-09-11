@@ -31,6 +31,11 @@ jobs:
           npm run build
           cp dist/index.html dist/404.html
 
+          for slug in patriarshie villa-repino loft-arma penthouse-city country-retreat; do
+            mkdir -p "dist/project/$slug"
+            cp dist/index.html "dist/project/$slug/index.html"
+          done
+
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
